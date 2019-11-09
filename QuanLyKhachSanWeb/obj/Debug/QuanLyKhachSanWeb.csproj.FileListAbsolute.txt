@@ -1,0 +1,24 @@
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll.config
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.pdb
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll.config
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll.config
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll.config
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb

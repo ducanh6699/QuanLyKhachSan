@@ -1,0 +1,41 @@
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DangNhap.resources
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSTaiKhoan.resources
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.dll
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.pdb
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+E:\Winform project\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\nekob\Desktop\QuanLyKhachSan\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DangNhap.resources
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSTaiKhoan.resources
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+C:\Users\nekob\Desktop\QuanLyKhachSan (1)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.dll
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.pdb
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DangNhap.resources
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSTaiKhoan.resources
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.TimPhong.resources
+C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSKhachHang.resources
