@@ -39,3 +39,6 @@ C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSa
 C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
 C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.TimPhong.resources
 C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSKhachHang.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
