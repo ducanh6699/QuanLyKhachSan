@@ -71,7 +71,7 @@
                                         <div class="book_tabel_item">
                                             <div class="form-group">
                                                 <div class='input-group date' id='datetimepicker11'>
-                                                    <asp:TextBox ID="txtNgayNhan" runat="server" class="form-control" placeholder="Ngày nhận"></asp:TextBox>
+                                                    <asp:TextBox ID="txtNgayNhan" runat="server" class="form-control" placeholder="Ngày nhận" required></asp:TextBox>
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-calendar" aria-hidden="true"></i>
                                                     </span>
@@ -79,7 +79,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <div class='input-group date' id='datetimepicker11'>
-                                                    <asp:TextBox ID="txtNgayTra" runat="server" class="form-control" placeholder="Ngày trả"></asp:TextBox>
+                                                    <asp:TextBox ID="txtNgayTra" runat="server" class="form-control" placeholder="Ngày trả" required></asp:TextBox>
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-calendar" aria-hidden="true"></i>
                                                     </span>
@@ -91,12 +91,12 @@
                                         <div class="book_tabel_item">
                                             <div class="form-group">
                                                 <div class='input-group'>
-                                                    <asp:TextBox ID="txtSoNguoi" runat="server" class="form-control" placeholder="Số người" ></asp:TextBox>
+                                                    <asp:TextBox ID="txtSoNguoi" runat="server" class="form-control" placeholder="Số người" required></asp:TextBox>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <div class='input-group'>
-                                                    <asp:TextBox ID="txtSDT" runat="server" class="form-control" placeholder="Số điện thoại"></asp:TextBox>
+                                                    <asp:TextBox ID="txtSDT" runat="server" class="form-control" placeholder="Số điện thoại" required></asp:TextBox>
                                                 </div>
                                             </div>
                                         </div>

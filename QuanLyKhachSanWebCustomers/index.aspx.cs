@@ -17,6 +17,8 @@ namespace QuanLyKhachSanWebCustomers
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            String url = String.Format("ChonPhong.aspx?NgayNhan={0}&NgayTra={1}&SDT={2}&SoNguoi={3}", txtNgayNhan.Text, txtNgayTra.Text, txtSDT.Text, txtSoNguoi.Text);
+            Response.Redirect(url);
         }
     }
 }
