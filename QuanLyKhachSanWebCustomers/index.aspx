@@ -78,7 +78,7 @@
                                                 </div>
                                             </div>
                                             <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker11'>
+                                                <div class='input-group date' id='datetimepicker1'>
                                                     <asp:TextBox ID="txtNgayTra" runat="server" class="form-control" placeholder="Ngày trả" required></asp:TextBox>
                                                     <span class="input-group-addon">
                                                         <i class="fa fa-calendar" aria-hidden="true"></i>

@@ -51,7 +51,9 @@ namespace QuanLyKhachSanWebCustomers
         protected void dgvPhong_RowCommand(object sender, GridViewCommandEventArgs e)
         {
             int _rowIndex = Convert.ToInt32(e.CommandArgument);
-            String id = dgvPhong.Rows[_rowIndex].Cells[1].Text;
+            String id = dgvPhong.Rows[_rowIndex].Cells[0].Text;
+            String url = String.Format("ThongTin.aspx?id={0}&NgayNhan={1}&NgayTra={2}&SDT={3}", id, Request.QueryString["NgayNhan"], Request.QueryString["NgayTra"], Request.QueryString["SDT"]);
+            Response.Redirect(url);
         }
     }
 }
