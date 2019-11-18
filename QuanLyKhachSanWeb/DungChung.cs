@@ -9,7 +9,7 @@ namespace QuanLyKhachSanWeb
 {
     public class DungChung
     {
-        protected static String strcon = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\QLKS.mdb";
+        protected static String strcon = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\QLKS.mdb";
         public static DataTable XemQuery(String sql)
         {
             OleDbConnection con = new OleDbConnection(strcon);

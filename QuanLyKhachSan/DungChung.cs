@@ -12,6 +12,7 @@ namespace QuanLyKhachSan
     class DungChung
     {
         public static int MaNguoiDung;
+        public static int Quyen;
         public static String ChucNangCuaNguoiDung;
         protected static String strcon = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\QLKS.mdb";
 

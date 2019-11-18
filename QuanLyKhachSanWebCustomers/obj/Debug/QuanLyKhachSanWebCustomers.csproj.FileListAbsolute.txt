@@ -31,3 +31,36 @@ E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.
 E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWebCustomers\obj\Debug\QuanLyKhachSanWebCustomers.csprojResolveAssemblyReference.cache
 E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWebCustomers\obj\Debug\QuanLyKhachSanWebCustomers.dll
 E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWebCustomers\obj\Debug\QuanLyKhachSanWebCustomers.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\ApplicationInsights.config
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\csc.exe
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\System.Collections.Immutable.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\System.Reflection.Metadata.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\vbc.exe
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\VBCSCompiler.exe
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\roslyn\VBCSCompiler.exe.config
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\QuanLyKhachSanWebCustomers.dll.config
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\QuanLyKhachSanWebCustomers.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\QuanLyKhachSanWebCustomers.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.Agent.Intercept.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.DependencyCollector.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.Web.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.WindowsServer.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.ApplicationInsights.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.DependencyCollector.xml
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.Web.xml
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.AI.WindowsServer.xml
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.ApplicationInsights.xml
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\obj\Debug\QuanLyKhachSanWebCustomers.csprojResolveAssemblyReference.cache
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\obj\Debug\QuanLyKhachSanWebCustomers.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWebCustomers\obj\Debug\QuanLyKhachSanWebCustomers.pdb

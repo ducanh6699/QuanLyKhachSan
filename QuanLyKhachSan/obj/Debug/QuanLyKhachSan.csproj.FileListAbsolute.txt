@@ -42,3 +42,19 @@ C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSan\obj\Debug\QuanLyKhachSa
 E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
 E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
 E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe.config
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.exe
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DangNhap.resources
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSKhachHang.resources
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSTaiKhoan.resources
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Menu.resources
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.TimPhong.resources
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSPhong.resources

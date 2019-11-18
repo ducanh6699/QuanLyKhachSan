@@ -22,3 +22,9 @@ C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\bin\QuanLyKhachSanWe
 C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
 C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
 C:\Users\nekob\Desktop\QuanLyKhachSan (3)\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll.config
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.pdb
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
+D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb

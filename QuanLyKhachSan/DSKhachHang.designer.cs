@@ -45,15 +45,15 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.btnMoFormThem = new System.Windows.Forms.Button();
             this.gbKhachHang = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.cbNam = new System.Windows.Forms.CheckBox();
-            this.cbNu = new System.Windows.Forms.CheckBox();
-            this.cbNgay = new System.Windows.Forms.ComboBox();
-            this.cbThang = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbNamSinh = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbThang = new System.Windows.Forms.ComboBox();
+            this.cbNgay = new System.Windows.Forms.ComboBox();
+            this.cbNu = new System.Windows.Forms.CheckBox();
+            this.cbNam = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dgvKhachHang = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -221,6 +221,70 @@
             this.gbKhachHang.TabStop = false;
             this.gbKhachHang.Text = "Thêm khách hàng";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(640, 64);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(39, 19);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Năm";
+            // 
+            // cbNamSinh
+            // 
+            this.cbNamSinh.FormattingEnabled = true;
+            this.cbNamSinh.Location = new System.Drawing.Point(685, 61);
+            this.cbNamSinh.Name = "cbNamSinh";
+            this.cbNamSinh.Size = new System.Drawing.Size(199, 27);
+            this.cbNamSinh.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(363, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 19);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Tháng";
+            // 
+            // cbThang
+            // 
+            this.cbThang.FormattingEnabled = true;
+            this.cbThang.Location = new System.Drawing.Point(415, 61);
+            this.cbThang.Name = "cbThang";
+            this.cbThang.Size = new System.Drawing.Size(219, 27);
+            this.cbThang.TabIndex = 20;
+            // 
+            // cbNgay
+            // 
+            this.cbNgay.FormattingEnabled = true;
+            this.cbNgay.Location = new System.Drawing.Point(136, 61);
+            this.cbNgay.Name = "cbNgay";
+            this.cbNgay.Size = new System.Drawing.Size(221, 27);
+            this.cbNgay.TabIndex = 19;
+            // 
+            // cbNu
+            // 
+            this.cbNu.AutoSize = true;
+            this.cbNu.Location = new System.Drawing.Point(200, 98);
+            this.cbNu.Name = "cbNu";
+            this.cbNu.Size = new System.Drawing.Size(49, 23);
+            this.cbNu.TabIndex = 18;
+            this.cbNu.Text = "Nữ";
+            this.cbNu.UseVisualStyleBackColor = true;
+            this.cbNu.CheckedChanged += new System.EventHandler(this.cbNu_CheckedChanged);
+            // 
+            // cbNam
+            // 
+            this.cbNam.AutoSize = true;
+            this.cbNam.Location = new System.Drawing.Point(136, 98);
+            this.cbNam.Name = "cbNam";
+            this.cbNam.Size = new System.Drawing.Size(58, 23);
+            this.cbNam.TabIndex = 17;
+            this.cbNam.Text = "Nam";
+            this.cbNam.UseVisualStyleBackColor = true;
+            this.cbNam.CheckedChanged += new System.EventHandler(this.cbNam_CheckedChanged);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -250,70 +314,6 @@
             this.dgvKhachHang.Size = new System.Drawing.Size(890, 222);
             this.dgvKhachHang.TabIndex = 15;
             this.dgvKhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
-            // 
-            // cbNam
-            // 
-            this.cbNam.AutoSize = true;
-            this.cbNam.Location = new System.Drawing.Point(136, 98);
-            this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(58, 23);
-            this.cbNam.TabIndex = 17;
-            this.cbNam.Text = "Nam";
-            this.cbNam.UseVisualStyleBackColor = true;
-            this.cbNam.CheckedChanged += new System.EventHandler(this.cbNam_CheckedChanged);
-            // 
-            // cbNu
-            // 
-            this.cbNu.AutoSize = true;
-            this.cbNu.Location = new System.Drawing.Point(200, 98);
-            this.cbNu.Name = "cbNu";
-            this.cbNu.Size = new System.Drawing.Size(49, 23);
-            this.cbNu.TabIndex = 18;
-            this.cbNu.Text = "Nữ";
-            this.cbNu.UseVisualStyleBackColor = true;
-            this.cbNu.CheckedChanged += new System.EventHandler(this.cbNu_CheckedChanged);
-            // 
-            // cbNgay
-            // 
-            this.cbNgay.FormattingEnabled = true;
-            this.cbNgay.Location = new System.Drawing.Point(136, 61);
-            this.cbNgay.Name = "cbNgay";
-            this.cbNgay.Size = new System.Drawing.Size(221, 27);
-            this.cbNgay.TabIndex = 19;
-            // 
-            // cbThang
-            // 
-            this.cbThang.FormattingEnabled = true;
-            this.cbThang.Location = new System.Drawing.Point(415, 61);
-            this.cbThang.Name = "cbThang";
-            this.cbThang.Size = new System.Drawing.Size(219, 27);
-            this.cbThang.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(363, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 19);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Tháng";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(640, 64);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 19);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Năm";
-            // 
-            // cbNamSinh
-            // 
-            this.cbNamSinh.FormattingEnabled = true;
-            this.cbNamSinh.Location = new System.Drawing.Point(685, 61);
-            this.cbNamSinh.Name = "cbNamSinh";
-            this.cbNamSinh.Size = new System.Drawing.Size(199, 27);
-            this.cbNamSinh.TabIndex = 22;
             // 
             // id
             // 
@@ -399,7 +399,7 @@
             this.Controls.Add(this.dgvKhachHang);
             this.Name = "DSKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DSKhachHang";
+            this.Text = "Danh sách khách hàng";
             this.Load += new System.EventHandler(this.DSKhachHang_Load);
             this.gbKhachHang.ResumeLayout(false);
             this.gbKhachHang.PerformLayout();

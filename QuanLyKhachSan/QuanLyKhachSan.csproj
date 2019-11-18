@@ -56,6 +56,12 @@
     <Compile Include="DSKhachHang.designer.cs">
       <DependentUpon>DSKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="DSPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DSPhong.Designer.cs">
+      <DependentUpon>DSPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="DSTaiKhoan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
       <DependentUpon>DSTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="DungChung.cs" />
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TimPhong.cs">
@@ -77,8 +89,14 @@
     <EmbeddedResource Include="DSKhachHang.resx">
       <DependentUpon>DSKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DSPhong.resx">
+      <DependentUpon>DSPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DSTaiKhoan.resx">
       <DependentUpon>DSTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
