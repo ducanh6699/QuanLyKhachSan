@@ -28,3 +28,9 @@ D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanL
 D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
 D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
 D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll.config
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.dll
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWeb\bin\QuanLyKhachSanWeb.pdb
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.csprojResolveAssemblyReference.cache
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.dll
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSanWeb\obj\Debug\QuanLyKhachSanWeb.pdb

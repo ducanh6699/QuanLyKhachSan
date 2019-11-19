@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="DangNhap.aspx" />
     <Content Include="DangXuat.aspx" />
+    <Content Include="HoaDon.aspx" />
     <Content Include="HoSo.aspx" />
     <Content Include="MatKhau.aspx" />
     <Content Include="TrangChu.aspx" />
@@ -89,6 +90,13 @@
       <DependentUpon>DangXuat.aspx</DependentUpon>
     </Compile>
     <Compile Include="DungChung.cs" />
+    <Compile Include="HoaDon.aspx.cs">
+      <DependentUpon>HoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HoaDon.aspx.designer.cs">
+      <DependentUpon>HoaDon.aspx</DependentUpon>
+    </Compile>
     <Compile Include="HoSo.aspx.cs">
       <DependentUpon>HoSo.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
