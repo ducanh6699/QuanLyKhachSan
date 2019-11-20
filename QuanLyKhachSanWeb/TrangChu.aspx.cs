@@ -31,7 +31,7 @@ namespace QuanLyKhachSanWeb
             Response.ContentType = "application/word";
             StringWriter stringWriter = new StringWriter();
             HtmlTextWriter htw = new HtmlTextWriter(stringWriter);
-            GridViewKhachHang.HeaderRow.Style.Add("background-color", "#FFFFFF");
+            GridViewKhachHang.HeaderRow.Style.Add("background-color", "#000000");
             GridViewKhachHang.RenderControl(htw);
             Response.Write(stringWriter.ToString());
             Response.End();
