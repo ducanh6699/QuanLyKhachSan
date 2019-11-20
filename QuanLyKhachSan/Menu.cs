@@ -47,12 +47,17 @@ namespace QuanLyKhachSan
             {
                 case "Danh sách khách hàng":
                     DSKhachHang DSKhachHang = new DSKhachHang();
-                    DSKhachHang.Show();
+                    DSKhachHang.ShowDialog();
                     break;
 
                 case "Danh sách người dùng":
                     DSTaiKhoan DSTaiKhoan = new DSTaiKhoan();
-                    DSTaiKhoan.Show();
+                    DSTaiKhoan.ShowDialog();
+                    break;
+
+                case "Danh sách phòng":
+                    DSPhong DSPhong = new DSPhong();
+                    DSPhong.ShowDialog();
                     break;
 
                 default:

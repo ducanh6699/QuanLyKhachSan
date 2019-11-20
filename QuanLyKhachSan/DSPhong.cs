@@ -26,6 +26,7 @@ namespace QuanLyKhachSan
             TaoMaPhong();
             TaoMaDatPhong();
             TaoMaDP_DV();
+            TaoMaHoaDon();
             btnHienThiThemP.Hide();
             btnHienThiThemDV.Hide();
             btnThemP.Show();
@@ -52,7 +53,7 @@ namespace QuanLyKhachSan
                                             WHERE (((DatPhong_DichVu.idDatPhong)=0));");
         }
 
-        String MaP, MaSuaP, MaDP, MaSuaDP, MaDP_DV, MaSuaDP_DV;
+        String MaP, MaSuaP, MaDP, MaSuaDP, MaDP_DV, MaSuaDP_DV, MaHD;
 
         private void layDSPhong()
         {
@@ -175,6 +176,17 @@ namespace QuanLyKhachSan
                 MaDP_DV = (int.Parse(tb.Rows[0]["Id"].ToString()) + 1).ToString();
             else
                 MaDP_DV = "1";
+        }
+
+        private void TaoMaHoaDon()
+        {
+            String sql = "SELECT Top 1 * FROM HoaDon ORDER BY Id DESC";
+            DataTable tb = new DataTable();
+            tb = DungChung.XemQuery(sql);
+            if (tb.Rows.Count > 0)
+                MaHD = (int.Parse(tb.Rows[0]["Id"].ToString()) + 1).ToString();
+            else
+                MaHD = "1";
         }
 
         private void Clear()
@@ -330,7 +342,7 @@ namespace QuanLyKhachSan
             {
                 String sql = String.Format("update Phong set SoPhong = {0}, IDLoaiPhong = {1} where ID = {2}", txtSoPhong.Text, cbLP.SelectedValue.ToString(), MaSuaP);
                 DungChung.ThemSuaXoaQuery(sql);
-                MessageBox.Show("Sửa Thành Công!", "Thông Báo");
+                MessageBox.Show("sửa thành công!", "Thông Báo");
                 DSPhong_Load(sender, e);
             }
         }
@@ -341,7 +353,7 @@ namespace QuanLyKhachSan
             {
                 String sql = String.Format("insert into Phong (Id,SoPhong,IDLoaiPhong) values({0},{1},{2})", MaP, txtSoPhong.Text, cbLP.SelectedValue.ToString());
                 DungChung.ThemSuaXoaQuery(sql);
-                MessageBox.Show("Đã Thêm Thành Công!", "Thông Báo");
+                MessageBox.Show("Đã thêm thành công!", "Thông Báo");
                 DSPhong_Load(sender, e);
             }
         }
@@ -359,17 +371,89 @@ namespace QuanLyKhachSan
 
         private void btnSuaDP_Click(object sender, EventArgs e)
         {
-
+            if (DungChung.confirm())
+            {
+                if (DateTime.Compare(dtNgayDen.Value, dtNgayDi.Value) > 0)
+                {
+                    MessageBox.Show("Ngày đến hoặc ngày đi không hợp lệ!", "Thông báo");
+                }
+                else
+                {
+                    String sql = String.Format("update DatPhong set IDKhachHang = {0}, IDPhong = {1}, NgayDen = '{2}', NgayDi = '{3}'  where ID = {4}", cbKH.SelectedValue.ToString(), MaSuaP, dtNgayDen.Value.ToString(), dtNgayDi.Value.ToString(), MaSuaDP);
+                    DungChung.ThemSuaXoaQuery(sql);
+                    MessageBox.Show("sửa thành công!", "Thông Báo");
+                    DSPhong_Load(sender, e);
+                }
+            }
         }
 
         private void btnThemDP_Click(object sender, EventArgs e)
         {
-
+            if (DungChung.confirm())
+            {
+                if (DateTime.Compare(dtNgayDen.Value, dtNgayDi.Value) > 0)
+                {
+                    MessageBox.Show("Ngày đến hoặc ngày đi không hợp lệ!", "Thông báo");
+                }
+                else
+                {
+                    String sql = String.Format("insert into DatPhong (ID,IDKhachHang,IDPhong,NgayDen,NgayDi) values({0},{1},{2},'{3}','{4}')", MaDP, cbKH.SelectedValue.ToString(), MaSuaP, dtNgayDen.Value.ToString(), dtNgayDi.Value.ToString());
+                    DungChung.ThemSuaXoaQuery(sql);
+                    MessageBox.Show("Đã thêm thành công!", "Thông Báo");
+                    DSPhong_Load(sender, e);
+                }
+            }
         }
 
         private void btnTraPhong_Click(object sender, EventArgs e)
         {
-
+            if (DungChung.confirm())
+            {
+                if (DateTime.Compare(dtNgayDen.Value, DateTime.Today) > 0) // neu ngay den ma lon hon hom nay tuc phong nay la phong dat truoc
+                {
+                    String sql = String.Format("update DatPhong set IDKhachHang = {0}, IDPhong = {1}, NgayDen = '{2}', NgayDi = '{3}'  where ID = {4}", cbKH.SelectedValue.ToString(), MaSuaP, DateTime.Now.AddDays(-1).ToString(), DateTime.Now.AddDays(-1).ToString(), MaSuaDP); // sua ngay den va ngay di ve hôm trước ngày thanh toàn 1 ngày để trên DS phòng cập nhật trạng thái phòng
+                    DungChung.ThemSuaXoaQuery(sql);
+                    DataTable dt = DungChung.XemQuery(String.Format(@"SELECT DatPhong.*, Phong.IDLoaiPhong, LoaiPhong.DonGia , KhachHang.Ten, DatPhong_DichVu.ID, DatPhong_DichVu.idDichVu,  DatPhong_DichVu.TongTien,DichVu.DonGia from (((((DatPhong left join Phong on DatPhong.IDPhong = Phong.ID) left join LoaiPhong on Phong.IDLoaiPhong = LoaiPhong.ID) left join KhachHang on DatPhong.IDKhachHang = KhachHang.ID) left join DatPhong_DichVu on DatPhong.ID = DatPhong_DichVu.IDDatPhong) left join DichVu on DatPhong_DichVu.idDichVu = DichVu.ID) where DatPhong.ID = {0}", MaSuaDP));
+                    int TongSoTien = int.Parse(dt.Rows[0]["LoaiPhong.DonGia"].ToString()); // tinh tien phong cho no mac dinh la o 1 ngay vi dat phong
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        TongSoTien += (dt.Rows[i]["TongTien"].ToString() == "") ? 0 : int.Parse(dt.Rows[i]["TongTien"].ToString()); // cong them tien dich vu cho no vao hoa don
+                    }
+                    sql = String.Format("insert into HoaDon (ID,IDDatPhong,TongSoTien) values({0},{1},{2})", MaHD, MaSuaDP, TongSoTien);
+                    DungChung.ThemSuaXoaQuery(sql);
+                    MessageBox.Show("Trả phòng thành công!", "Thông Báo");
+                    DSPhong_Load(sender, e);
+                }
+                else
+                {
+                    TimeSpan SoNgayThue = dtNgayDi.Value.Subtract(dtNgayDen.Value);
+                    //int SoNgayThue = DateTime.Compare(, dtNgayDen.Value);TimeSpan ts = t1.Subtract(t2);
+                    DataTable dt = DungChung.XemQuery(String.Format(@"SELECT DatPhong.*, Phong.IDLoaiPhong, LoaiPhong.DonGia , KhachHang.Ten, DatPhong_DichVu.ID, DatPhong_DichVu.idDichVu,  DatPhong_DichVu.TongTien,DichVu.DonGia from (((((DatPhong left join Phong on DatPhong.IDPhong = Phong.ID) left join LoaiPhong on Phong.IDLoaiPhong = LoaiPhong.ID) left join KhachHang on DatPhong.IDKhachHang = KhachHang.ID) left join DatPhong_DichVu on DatPhong.ID = DatPhong_DichVu.IDDatPhong) left join DichVu on DatPhong_DichVu.idDichVu = DichVu.ID) where DatPhong.ID = {0}", MaSuaDP));
+                    int TongSoTien;
+                    if (SoNgayThue.Days == 0) // neu nhu thue trong ngay thu nua gia 1 ngay
+                    {
+                        TongSoTien = int.Parse(dt.Rows[0]["LoaiPhong.DonGia"].ToString()) / 2;
+                    }
+                    else if (SoNgayThue.Days == 1) // neu nhu thue qua dem thu gia 1 ngay
+                    {
+                        TongSoTien = int.Parse(dt.Rows[0]["LoaiPhong.DonGia"].ToString());
+                    }
+                    else // neu o nhieu hon 1 ngay thi sẽ là đơn giá * ngày ở
+                    {
+                        TongSoTien = int.Parse(dt.Rows[0]["LoaiPhong.DonGia"].ToString()) * SoNgayThue.Days;
+                    }
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        TongSoTien += (dt.Rows[i]["TongTien"].ToString() == "") ? 0 : int.Parse(dt.Rows[i]["TongTien"].ToString());
+                    }
+                    String sql = String.Format("insert into HoaDon (ID,IDDatPhong,TongSoTien) values({0},{1},{2})", MaHD, MaSuaDP, TongSoTien);
+                    DungChung.ThemSuaXoaQuery(sql);
+                    sql = String.Format("update DatPhong set IDKhachHang = {0}, IDPhong = {1}, NgayDen = '{2}', NgayDi = '{3}'  where ID = {4}", cbKH.SelectedValue.ToString(), MaSuaP, DateTime.Now.AddDays(-1).ToString(), DateTime.Now.AddDays(-1).ToString(), MaSuaDP);
+                    DungChung.ThemSuaXoaQuery(sql);
+                    MessageBox.Show("Trả phòng thành công!", "Thông Báo");
+                    DSPhong_Load(sender, e);
+                }
+            }
         }
 
         private void btnHienThiThemDV_Click(object sender, EventArgs e)
@@ -389,7 +473,7 @@ namespace QuanLyKhachSan
             {
                 String sql = String.Format("update DatPhong_DichVu set idDichVu = {0}, SoLuong = {1}, TongTien = {2}  where ID = {3}", cbDV.SelectedValue.ToString(), txtSoLuongDV.Text, (int.Parse(txtDonGiaDV.Text) * int.Parse(txtSoLuongDV.Text)).ToString(), MaSuaDP_DV);
                 DungChung.ThemSuaXoaQuery(sql);
-                MessageBox.Show("Sửa Thành Công!", "Thông Báo");
+                MessageBox.Show("sửa thành công!", "Thông Báo");
                 dgvDichVu.DataSource = DungChung.XemQuery(String.Format(@"SELECT DatPhong_DichVu.ID, DichVu.ID, DichVu.TenDichVu, DichVu.DonGia, DatPhong_DichVu.SoLuong, DatPhong_DichVu.TongTien
                                             FROM DichVu INNER JOIN DatPhong_DichVu ON DichVu.ID = DatPhong_DichVu.idDichVu
                                             WHERE (((DatPhong_DichVu.idDatPhong)={0}));", MaSuaDP));
@@ -402,7 +486,7 @@ namespace QuanLyKhachSan
             {
                 String sql = String.Format("insert into DatPhong_DichVu (ID,idDichVu,idDatPhong,SoLuong,TongTien) values({0},{1},{2},{3},{4})", MaDP_DV, cbDV.SelectedValue.ToString(), MaSuaDP, txtSoLuongDV.Text, (int.Parse(txtDonGiaDV.Text) * int.Parse(txtSoLuongDV.Text)).ToString());
                 DungChung.ThemSuaXoaQuery(sql);
-                MessageBox.Show("Đã Thêm Thành Công!", "Thông Báo");
+                MessageBox.Show("Đã thêm thành công!", "Thông Báo");
                 TaoMaDP_DV();
                 dgvDichVu.DataSource = DungChung.XemQuery(String.Format(@"SELECT DatPhong_DichVu.ID, DichVu.ID, DichVu.TenDichVu, DichVu.DonGia, DatPhong_DichVu.SoLuong, DatPhong_DichVu.TongTien
                                             FROM DichVu INNER JOIN DatPhong_DichVu ON DichVu.ID = DatPhong_DichVu.idDichVu
@@ -429,7 +513,7 @@ namespace QuanLyKhachSan
                 {
                     String sql = String.Format("delete from DatPhong_DichVu where Id = {0}", dgvDichVu.Rows[e.RowIndex].Cells[2].Value.ToString());
                     DungChung.ThemSuaXoaQuery(sql);
-                    MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+                    MessageBox.Show("Xóa thành công!", "Thông Báo");
                     btnHienThiThemDV_Click(sender, e);
                     dgvDichVu.DataSource = DungChung.XemQuery(String.Format(@"SELECT DatPhong_DichVu.ID, DichVu.ID, DichVu.TenDichVu, DichVu.DonGia, DatPhong_DichVu.SoLuong, DatPhong_DichVu.TongTien
                                             FROM DichVu INNER JOIN DatPhong_DichVu ON DichVu.ID = DatPhong_DichVu.idDichVu
@@ -458,7 +542,7 @@ namespace QuanLyKhachSan
             {
                 String sql = String.Format("delete from Phong where ID = {0}", MaSuaP);
                 DungChung.ThemSuaXoaQuery(sql);
-                MessageBox.Show("Xóa Thành Công!", "Thông Báo");
+                MessageBox.Show("Xóa thành công!", "Thông Báo");
                 DSPhong_Load(sender, e);
             }
         }
