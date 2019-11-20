@@ -31,6 +31,7 @@ namespace QuanLyKhachSanWeb
         {
             String sql = String.Format("Update NguoiDung set TenNguoiDung = '{0}', Email = '{1}', DiaChi = '{2}' Where TaiKhoan = '{3}'", TextBoxTen.Text, TextBoxEmail.Text, TextBoxDiaChi.Text, Session["ten"].ToString());
             DungChung.ThemSuaXoaQuery(sql);
+            Response.Write("<script>alert('Đổi thành công')</script>");
         }
     }
 }

@@ -85,7 +85,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <!-- Brand and toggle get grouped for better mobile display -->
-                    <a class="navbar-brand logo_h" href="index.html">
+                    <a class="navbar-brand logo_h" href="index.aspx">
                         <img src="image/Logo.png" alt=""></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="icon-bar"></span>
@@ -95,7 +95,7 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav ml-auto">
-                            <li class="nav-item active"><a class="nav-link" href="elements.html">Trang chủ</a></li>
+                            <li class="nav-item active"><a class="nav-link" href="index.aspx">Trang chủ</a></li>
                             <li class="nav-item"><a class="nav-link" href="contact.html">Liên hệ</a></li>
                         </ul>
                     </div>
@@ -110,7 +110,7 @@
                 <div class="page-cover text-center">
                     <h2 class="page-cover-tittle f_48">Chọn phòng</h2>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="index.aspx">Trang chủ</a></li>
                         <li class="active">Chọn phòng</li>
                     </ol>
                 </div>
@@ -122,7 +122,7 @@
             <h3 class="text-heading title_color container">Vui lòng chọn phòng trống</h3>
 
             <div id="msgLoi" visible="false" class="container" runat="server" style="padding-bottom: 300px;">
-                <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red"></asp:Label>
+                <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red" Font-Names="Times New Roman"></asp:Label>
             </div>
 
             <div id="gridview" class="container" runat="server">
