@@ -64,6 +64,7 @@
             this.NgayTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongSoTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDatPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayDen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayDi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHoaDon)).BeginInit();
@@ -111,6 +112,7 @@
             this.NgayTra,
             this.TongSoTien,
             this.MaDatPhong,
+            this.MaHoaDon,
             this.NgayDen,
             this.NgayDi});
             this.dgvHoaDon.Location = new System.Drawing.Point(12, 55);
@@ -218,10 +220,10 @@
             // BtnIngrv
             // 
             this.BtnIngrv.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.BtnIngrv.HeaderText = "Xóa";
+            this.BtnIngrv.HeaderText = "In";
             this.BtnIngrv.Name = "BtnIngrv";
             this.BtnIngrv.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BtnIngrv.Text = "Xóa";
+            this.BtnIngrv.Text = "In";
             this.BtnIngrv.UseColumnTextForButtonValue = true;
             this.BtnIngrv.Width = 70;
             // 
@@ -352,6 +354,14 @@
             this.MaDatPhong.DataPropertyName = "IDDatPhong";
             this.MaDatPhong.HeaderText = "MaDatPhong";
             this.MaDatPhong.Name = "MaDatPhong";
+            this.MaDatPhong.Visible = false;
+            // 
+            // MaHoaDon
+            // 
+            this.MaHoaDon.DataPropertyName = "ID";
+            this.MaHoaDon.HeaderText = "MaHoaDon";
+            this.MaHoaDon.Name = "MaHoaDon";
+            this.MaHoaDon.Visible = false;
             // 
             // NgayDen
             // 
@@ -418,6 +428,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn TongSoTien;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDatPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDen;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayDi;
     }

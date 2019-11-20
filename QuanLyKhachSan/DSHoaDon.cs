@@ -26,7 +26,7 @@ namespace QuanLyKhachSan
 
         private void layDSHoaDon()
         {
-            DataTable dt = DungChung.XemQuery(@"SELECT KhachHang.Ten, KhachHang.NgaySinh, KhachHang.GioiTinh, KhachHang.DiaChi, KhachHang.SDT, Phong.SoPhong, LoaiPhong.TenLoaiPhong, LoaiPhong.SoGiuong, LoaiPhong.DonGia, DatPhong.NgayDen, DatPhong.NgayDi, HoaDon.TongSoTien, HoaDon.IDDatPhong
+            DataTable dt = DungChung.XemQuery(@"SELECT HoaDon.ID, KhachHang.Ten, KhachHang.NgaySinh, KhachHang.GioiTinh, KhachHang.DiaChi, KhachHang.SDT, Phong.SoPhong, LoaiPhong.TenLoaiPhong, LoaiPhong.SoGiuong, LoaiPhong.DonGia, DatPhong.NgayDen, DatPhong.NgayDi, HoaDon.TongSoTien, HoaDon.IDDatPhong
                                                         FROM (LoaiPhong INNER JOIN Phong ON LoaiPhong.ID = Phong.IDLoaiPhong) INNER JOIN (KhachHang INNER JOIN (DatPhong INNER JOIN HoaDon ON DatPhong.ID = HoaDon.IDDatPhong) ON KhachHang.ID = DatPhong.IDKhachHang) ON Phong.ID = DatPhong.IDPhong;");
             dt.Columns.Add("TongTienPhong", typeof(String));
             dt.Columns.Add("TongTienDichVu", typeof(String));
@@ -80,7 +80,9 @@ namespace QuanLyKhachSan
             {
                 if (DungChung.confirm())
                 {
-                    //System.Diagnostics.Process.Start("http://localhost:49964/index.aspx?taikhoan=" + WinDungChung.taiKhoan + "&matkhau=" + WinDungChung.matKhau);
+                    String sql = String.Format(@"SELECT HoaDon.ID, KhachHang.Ten, KhachHang.NgaySinh, KhachHang.GioiTinh, KhachHang.DiaChi, KhachHang.SDT, Phong.SoPhong, LoaiPhong.TenLoaiPhong, LoaiPhong.SoGiuong, LoaiPhong.DonGia, DatPhong.NgayDen, DatPhong.NgayDi, HoaDon.TongSoTien, HoaDon.IDDatPhong
+                                                        FROM (LoaiPhong INNER JOIN Phong ON LoaiPhong.ID = Phong.IDLoaiPhong) INNER JOIN (KhachHang INNER JOIN (DatPhong INNER JOIN HoaDon ON DatPhong.ID = HoaDon.IDDatPhong) ON KhachHang.ID = DatPhong.IDKhachHang) ON Phong.ID = DatPhong.IDPhong where HoaDon.ID = {0}", dgvHoaDon.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    System.Diagnostics.Process.Start("http://localhost:58742/hoadon.aspx?sql=" + sql);
                 }
             }
             else if (e.ColumnIndex == 1 && e.RowIndex != -1) // bấm nút xem trên dgv
