@@ -397,6 +397,7 @@
             this.Controls.Add(this.gbKhachHang);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvKhachHang);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DSKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách khách hàng";

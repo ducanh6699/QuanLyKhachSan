@@ -411,7 +411,7 @@ namespace QuanLyKhachSan
             {
                 if (DateTime.Compare(dtNgayDen.Value, DateTime.Today) > 0) // neu ngay den ma lon hon hom nay tuc phong nay la phong dat truoc
                 {
-                    String sql = String.Format("update DatPhong set IDKhachHang = {0}, IDPhong = {1}, NgayDen = '{2}', NgayDi = '{3}'  where ID = {4}", cbKH.SelectedValue.ToString(), MaSuaP, DateTime.Now.AddDays(-1).ToString(), DateTime.Now.AddDays(-1).ToString(), MaSuaDP); // sua ngay den va ngay di ve hôm trước ngày thanh toàn 1 ngày để trên DS phòng cập nhật trạng thái phòng
+                    String sql = String.Format("update DatPhong set IDKhachHang = {0}, IDPhong = {1}, NgayDen = '{2}', NgayDi = '{3}'  where ID = {4}", cbKH.SelectedValue.ToString(), MaSuaP, DateTime.Today.AddDays(-1).ToString(), DateTime.Today.AddDays(-1).ToString(), MaSuaDP); // sua ngay den va ngay di ve hôm trước ngày thanh toàn 1 ngày để trên DS phòng cập nhật trạng thái phòng
                     DungChung.ThemSuaXoaQuery(sql);
                     DataTable dt = DungChung.XemQuery(String.Format(@"SELECT DatPhong.*, Phong.IDLoaiPhong, LoaiPhong.DonGia , KhachHang.Ten, DatPhong_DichVu.ID, DatPhong_DichVu.idDichVu,  DatPhong_DichVu.TongTien,DichVu.DonGia from (((((DatPhong left join Phong on DatPhong.IDPhong = Phong.ID) left join LoaiPhong on Phong.IDLoaiPhong = LoaiPhong.ID) left join KhachHang on DatPhong.IDKhachHang = KhachHang.ID) left join DatPhong_DichVu on DatPhong.ID = DatPhong_DichVu.IDDatPhong) left join DichVu on DatPhong_DichVu.idDichVu = DichVu.ID) where DatPhong.ID = {0}", MaSuaDP));
                     int TongSoTien = int.Parse(dt.Rows[0]["LoaiPhong.DonGia"].ToString()); // tinh tien phong cho no mac dinh la o 1 ngay vi dat phong
@@ -426,6 +426,7 @@ namespace QuanLyKhachSan
                 }
                 else
                 {
+                    dtNgayDi.Value = DateTime.Today;
                     TimeSpan SoNgayThue = dtNgayDi.Value.Subtract(dtNgayDen.Value);
                     //int SoNgayThue = DateTime.Compare(, dtNgayDen.Value);TimeSpan ts = t1.Subtract(t2);
                     DataTable dt = DungChung.XemQuery(String.Format(@"SELECT DatPhong.*, Phong.IDLoaiPhong, LoaiPhong.DonGia , KhachHang.Ten, DatPhong_DichVu.ID, DatPhong_DichVu.idDichVu,  DatPhong_DichVu.TongTien,DichVu.DonGia from (((((DatPhong left join Phong on DatPhong.IDPhong = Phong.ID) left join LoaiPhong on Phong.IDLoaiPhong = LoaiPhong.ID) left join KhachHang on DatPhong.IDKhachHang = KhachHang.ID) left join DatPhong_DichVu on DatPhong.ID = DatPhong_DichVu.IDDatPhong) left join DichVu on DatPhong_DichVu.idDichVu = DichVu.ID) where DatPhong.ID = {0}", MaSuaDP));
@@ -448,7 +449,7 @@ namespace QuanLyKhachSan
                     }
                     String sql = String.Format("insert into HoaDon (ID,IDDatPhong,TongSoTien) values({0},{1},{2})", MaHD, MaSuaDP, TongSoTien);
                     DungChung.ThemSuaXoaQuery(sql);
-                    sql = String.Format("update DatPhong set IDKhachHang = {0}, IDPhong = {1}, NgayDen = '{2}', NgayDi = '{3}'  where ID = {4}", cbKH.SelectedValue.ToString(), MaSuaP, DateTime.Now.AddDays(-1).ToString(), DateTime.Now.AddDays(-1).ToString(), MaSuaDP);
+                    sql = String.Format("update DatPhong set IDKhachHang = {0}, IDPhong = {1}, NgayDen = '{2}', NgayDi = '{3}'  where ID = {4}", cbKH.SelectedValue.ToString(), MaSuaP, DateTime.Today.AddDays(-1).ToString(), DateTime.Today.AddDays(-1).ToString(), MaSuaDP);
                     DungChung.ThemSuaXoaQuery(sql);
                     MessageBox.Show("Trả phòng thành công!", "Thông Báo");
                     DSPhong_Load(sender, e);

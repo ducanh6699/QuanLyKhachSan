@@ -60,6 +60,11 @@ namespace QuanLyKhachSan
                     DSPhong.ShowDialog();
                     break;
 
+                case "Danh sách hóa đơn":
+                    DSHoaDon DSHoaDon = new DSHoaDon();
+                    DSHoaDon.ShowDialog();
+                    break;
+
                 default:
                     MessageBox.Show("Chức năng này đang phát triển", "Thông báo");
                     break;

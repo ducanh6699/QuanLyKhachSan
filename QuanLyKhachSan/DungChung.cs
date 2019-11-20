@@ -51,5 +51,10 @@ namespace QuanLyKhachSan
                 Application.Exit();
             }
         }
+
+        internal static DataTable XemQuery(string p, string IDDatPhong)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
