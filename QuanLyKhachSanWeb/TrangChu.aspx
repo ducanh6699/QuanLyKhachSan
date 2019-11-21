@@ -1,4 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TrangChu.aspx.cs" Inherits="QuanLyKhachSanWeb.TrangChu" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="TrangChu.aspx.cs" EnableEventValidation="false" Inherits="QuanLyKhachSanWeb.TrangChu" %>
+
+<%@ Register Assembly="System.Web.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" Namespace="System.Web.UI.DataVisualization.Charting" TagPrefix="asp" %>
 
 <!DOCTYPE html>
 
@@ -17,6 +19,62 @@
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <style>
+        .Grid {
+            background-color: #fff;
+            margin: 5px 0 10px 0;
+            border: solid 1px #525252;
+            border-collapse: collapse;
+            font-family: Calibri;
+            color: #474747;
+            width: 100%;
+        }
+
+            .Grid td {
+                padding: 2px;
+                border: solid 1px #c1c1c1;
+            }
+
+            .Grid th {
+                padding: 4px 2px;
+                color: #fff;
+                background: #363670 url(Images/grid-header.png) repeat-x top;
+                border-left: solid 1px #525252;
+                font-size: 0.9em;
+                text-align: center;
+            }
+
+            .Grid .alt {
+                background: #fcfcfc url(Images/grid-alt.png) repeat-x top;
+            }
+
+            .Grid .pgr {
+                background: #363670 url(Images/grid-pgr.png) repeat-x top;
+            }
+
+                .Grid .pgr table {
+                    margin: 3px 0;
+                }
+
+                .Grid .pgr td {
+                    border-width: 0;
+                    padding: 0 6px;
+                    border-left: solid 1px #666;
+                    font-weight: bold;
+                    color: #fff;
+                    line-height: 12px;
+                }
+
+                .Grid .pgr a {
+                    color: Gray;
+                    text-decoration: none;
+                }
+
+                    .Grid .pgr a:hover {
+                        color: #000;
+                        text-decoration: none;
+                    }
+    </style>
 </head>
 <body>
     <div>
@@ -29,7 +87,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">Quản lý</a>
+                    <a class="navbar-brand" href="TrangChu.aspx">Quản lý</a>
                 </div>
 
                 <ul class="nav navbar-top-links navbar-right">
@@ -282,14 +340,14 @@
 
 
                                     <div class="panel-body">
-                                        <div style="width: 100%; height: 655px;">
-                                            <asp:GridView ID="GridViewKhachHang" runat="server" Height="660px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None">
+                                        <div style="width: 100%; height: 653px; overflow: scroll;">
+                                            <asp:GridView ID="GridViewKhachHang" runat="server" Height="660px" Width="100%" CellPadding="4" ForeColor="#333333" GridLines="None" Style="table-layout: fixed;" CssClass="Grid" AlternatingRowStyle-CssClass="alt" PagerStyle-CssClass="pgr">
                                                 <AlternatingRowStyle BackColor="White" />
                                                 <EditRowStyle BackColor="#2461BF" />
                                                 <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
                                                 <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                                                <RowStyle BackColor="#EFF3FB" />
+                                                <RowStyle BackColor="#EFF3FB" HorizontalAlign="Center" />
                                                 <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                                                 <SortedAscendingCellStyle BackColor="#F5F7FB" />
                                                 <SortedAscendingHeaderStyle BackColor="#6D95E1" />
@@ -300,6 +358,8 @@
                                     </div>
                                 </div>
                             </div>
+
+
                         </form>
                         <div class="col-md-3 col-sm-12 col-xs-12">
                             <div class="panel panel-primary text-center no-boder bg-color-green">
@@ -349,13 +409,33 @@
                                 </div>
                             </div>
                         </div>
+
+
+                        <div class="panel panel-default col-md-12 row">
+                            <div class="panel-heading">
+                                Thống kê thu nhập
+                            </div>
+
+
+                            <div class="panel-body">
+                                <asp:Chart ID="Chart1" runat="server">
+                                    <Series>
+                                        <asp:Series XValueMember="thoigian" YValueMembers="SumOfTongSoTien" Name="Series1"></asp:Series>
+                                    </Series>
+                                    <ChartAreas>
+                                        <asp:ChartArea Name="ChartArea1"></asp:ChartArea>
+                                    </ChartAreas>
+                                </asp:Chart>
+
+                            </div>
+                        </div>
                     </div>
 
 
 
                     <!-- /. ROW  -->
 
-                    
+
                     <!-- /. ROW  -->
                 </div>
                 <!-- /. PAGE INNER  -->

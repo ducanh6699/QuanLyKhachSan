@@ -57,7 +57,7 @@
                                         <asp:TextBox required="true" TextMode="Password" ID="TXTPassword" placeholder="Mật khẩu" class="form-password form-control" runat="server"></asp:TextBox>
                                     </div>
                                     <asp:Button ID="ButtonDangNhap" runat="server" Text="Đăng nhập" class="form-control btn-danger" OnClick="ButtonDangNhap_Click" />
-                                    <asp:Label ID="LabelStatus" runat="server" ForeColor="White"></asp:Label>
+                                    <asp:Label ID="LabelStatus" runat="server" ForeColor="Red" BorderStyle="NotSet" Font-Italic="False"></asp:Label>
                                 </form>
                             </div>
                         </div>

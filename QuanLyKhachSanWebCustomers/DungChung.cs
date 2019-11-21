@@ -29,5 +29,16 @@ namespace QuanLyKhachSanWebCustomers
             cmd.ExecuteNonQuery();
             con.Close();
         }
+
+        public static String getlastid(String sql)
+        {
+            OleDbConnection con = new OleDbConnection(strcon);
+            con.Open();
+            OleDbDataAdapter ada = new OleDbDataAdapter(sql, con);
+            DataTable tb = new DataTable();
+            ada.Fill(tb);
+            con.Close();
+            return tb.Rows[0]["id"].ToString();
+        }
     }
 }

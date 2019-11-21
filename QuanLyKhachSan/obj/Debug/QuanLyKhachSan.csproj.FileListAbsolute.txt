@@ -59,3 +59,17 @@ D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\Qu
 D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache
 D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSPhong.resources
 D:\All File\Quan Ly Khach San ASP.NET\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSHoaDon.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.exe
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSan.pdb
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.dll
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\bin\Debug\QuanLyKhachSanWeb.pdb
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csprojResolveAssemblyReference.cache
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DangNhap.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSHoaDon.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSKhachHang.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSPhong.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.DSTaiKhoan.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Menu.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.Properties.Resources.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.TimPhong.resources
+E:\Winform project\QLKS\QuanLyKhachSan\QuanLyKhachSan\obj\Debug\QuanLyKhachSan.csproj.GenerateResource.Cache

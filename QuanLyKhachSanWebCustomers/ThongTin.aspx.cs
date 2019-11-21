@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Globalization;
 
 namespace QuanLyKhachSanWebCustomers
 {
@@ -40,10 +41,9 @@ namespace QuanLyKhachSanWebCustomers
                 }
                 else
                 {
-                    String Sql = String.Format(@"SELECT IDPhong
-                                         FROM DatPhong
-                                         WHERE idPhong = {2} AND (((IDPhong) Not In (Select IDPhong From DatPhong Where (DatPhong.NgayDen <= #{0}# AND DatPhong.NgayDi >= #{0}#)
-                                         OR (DatPhong.NgayDen <= #{1}# AND DatPhong.NgayDi >= #{1}#) ))) ;", Request.QueryString["NgayNhan"].ToString(), Request.QueryString["NgayTra"].ToString(), Request.QueryString["id"].ToString());
+                    String Sql = String.Format(@"SELECT Phong.ID
+                                                 FROM Phong
+                                                 Where Phong.ID = {2} AND Phong.ID NOT IN (Select IDPhong from DatPhong Where (NgayDen <= #{0}#  AND NgayDi >=  #{0}#) AND (NgayDen <= #{1}#  AND NgayDi >=  #{1}#))", Request.QueryString["NgayNhan"].ToString(), Request.QueryString["NgayTra"].ToString(), Request.QueryString["id"].ToString());
                     if (DungChung.XemQuery(Sql).Rows.Count == 0)
                     {
                         baoloi();
@@ -51,8 +51,8 @@ namespace QuanLyKhachSanWebCustomers
                     }
                     else
                     {
-                        DateTime NgayNhan = DateTime.Parse(Request.QueryString["NgayNhan"].ToString());
-                        DateTime NgayTra = DateTime.Parse(Request.QueryString["NgayTra"].ToString());
+                        DateTime NgayNhan = DateTime.ParseExact(Request.QueryString["NgayNhan"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                        DateTime NgayTra = DateTime.ParseExact(Request.QueryString["NgayTra"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
                         int totaldate = totalday(NgayNhan, NgayTra);
                         Sql = String.Format(@"SELECT Phong.SoPhong, LoaiPhong.DonGia * {0} as Gia, LoaiPhong.ID
                                                 FROM LoaiPhong INNER JOIN Phong ON LoaiPhong.ID = Phong.IDLoaiPhong
@@ -106,7 +106,8 @@ namespace QuanLyKhachSanWebCustomers
             }
             sql = String.Format("INSERT into DatPhong (IDKhachHang,IDPhong,NgayDen,NgayDI) values({0},{1},'{2}','{3}')", id, Request.QueryString["id"], Request.QueryString["NgayNhan"], Request.QueryString["NgayTra"]);
             DungChung.ThemSuaXoaQuery(sql);
-            sql = String.Format("INSERT into HoaDon (IDKhachHang,IDPhong,TongSoTien) values({0},{1},'{2}')", id, Request.QueryString["id"], lbChiPhi.Text);
+            String lastidDatPhong = lastid("Select TOP 1 ID FROM DatPhong ORDER BY id DESC");
+            sql = String.Format("INSERT into HoaDon (IDDatPhong,TongSoTien) values({0},{1})", lastidDatPhong, lbChiPhi.Text);
             DungChung.ThemSuaXoaQuery(sql);
             Response.Redirect("index.aspx");
         }

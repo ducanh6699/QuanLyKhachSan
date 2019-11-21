@@ -32,6 +32,8 @@ namespace QuanLyKhachSanWeb
                     {
                         sqlmatkhau = String.Format("Update NguoiDung Set MatKhau = '{0}' where TaiKhoan = '{1}'", TextBoxMoi.Text,Session["ten"].ToString());
                         DungChung.ThemSuaXoaQuery(sqlmatkhau);
+                        LabelBaoLoi.Visible = false;
+                        Response.Write("<script>alert('Đổi thành công')</script>");
                     }
                     else LabelBaoLoi.Text = "Mật khẩu mới và nhập lại mật khẩu không khớp";
                 }
