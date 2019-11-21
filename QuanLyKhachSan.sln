@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyKhachSanWeb", "QuanLy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyKhachSanWebCustomers", "QuanLyKhachSanWebCustomers\QuanLyKhachSanWebCustomers.csproj", "{D2D39F1E-3244-4981-A39E-B7100486E1C3}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup QLKS", "Setup QLBH\Setup QLBH.vdproj", "{E21BC4DB-DFB6-4A27-A32D-82124A553B4A}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup QLKS", "Setup QLKS\Setup QLKS.vdproj", "{0EDEC421-DB6F-4E50-8007-E0DD18D6C42E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +29,8 @@ Global
 		{D2D39F1E-3244-4981-A39E-B7100486E1C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2D39F1E-3244-4981-A39E-B7100486E1C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D2D39F1E-3244-4981-A39E-B7100486E1C3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E21BC4DB-DFB6-4A27-A32D-82124A553B4A}.Debug|Any CPU.ActiveCfg = Debug
-		{E21BC4DB-DFB6-4A27-A32D-82124A553B4A}.Release|Any CPU.ActiveCfg = Release
+		{0EDEC421-DB6F-4E50-8007-E0DD18D6C42E}.Debug|Any CPU.ActiveCfg = Debug
+		{0EDEC421-DB6F-4E50-8007-E0DD18D6C42E}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
