@@ -113,7 +113,7 @@
                             </div>
 
                             <div class="col-md-6 mb-3">
-                                <label for="txtNgaySinh">Họ và tên (*)</label>
+                                <label for="txtNgaySinh">Ngày sinh (*)</label>
                                 <asp:TextBox ID="txtNgaySinh" class="form-control" runat="server" placeholder="MM/dd/yyyy" required></asp:TextBox>
                             </div>
 
@@ -140,7 +140,7 @@
 
 
                         <div class="mb-3">
-                            <label for="txtSDT">Số điện thoại </label>
+                            <label for="txtSDT">Số điện thoại (*) </label>
                             <asp:TextBox ID="txtSDT" class="form-control" placeholder="Số điện thoại" runat="server"></asp:TextBox>
                         </div>
 

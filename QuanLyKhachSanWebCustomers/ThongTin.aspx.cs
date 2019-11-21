@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
+using System.Globalization;
 
 namespace QuanLyKhachSanWebCustomers
 {
@@ -50,8 +51,8 @@ namespace QuanLyKhachSanWebCustomers
                     }
                     else
                     {
-                        DateTime NgayNhan = DateTime.Parse(Request.QueryString["NgayNhan"].ToString());
-                        DateTime NgayTra = DateTime.Parse(Request.QueryString["NgayTra"].ToString());
+                        DateTime NgayNhan = DateTime.ParseExact(Request.QueryString["NgayNhan"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
+                        DateTime NgayTra = DateTime.ParseExact(Request.QueryString["NgayTra"].ToString(), "MM/dd/yyyy", CultureInfo.InvariantCulture);
                         int totaldate = totalday(NgayNhan, NgayTra);
                         Sql = String.Format(@"SELECT Phong.SoPhong, LoaiPhong.DonGia * {0} as Gia, LoaiPhong.ID
                                                 FROM LoaiPhong INNER JOIN Phong ON LoaiPhong.ID = Phong.IDLoaiPhong
@@ -106,7 +107,7 @@ namespace QuanLyKhachSanWebCustomers
             sql = String.Format("INSERT into DatPhong (IDKhachHang,IDPhong,NgayDen,NgayDI) values({0},{1},'{2}','{3}')", id, Request.QueryString["id"], Request.QueryString["NgayNhan"], Request.QueryString["NgayTra"]);
             DungChung.ThemSuaXoaQuery(sql);
             String lastidDatPhong = lastid("Select TOP 1 ID FROM DatPhong ORDER BY id DESC");
-            sql = String.Format("INSERT into HoaDon (IDDatPhong,TongSoTien, DaThanhToan) values({0},{1},false)", lastidDatPhong, lbChiPhi.Text);
+            sql = String.Format("INSERT into HoaDon (IDDatPhong,TongSoTien) values({0},{1})", lastidDatPhong, lbChiPhi.Text);
             DungChung.ThemSuaXoaQuery(sql);
             Response.Redirect("index.aspx");
         }
