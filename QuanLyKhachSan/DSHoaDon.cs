@@ -45,12 +45,12 @@ namespace QuanLyKhachSan
                     if (songaymuon == 1)
                     {
                         NgayMuon = DateTime.Parse(dt.Rows[i]["NgayDen"].ToString()).AddDays(1);
-                        NgayTra = DateTime.Parse(dt.Rows[i]["NgayDi"].ToString()).AddDays(1);
+                        NgayTra = DateTime.Parse(dt.Rows[i]["NgayDi"].ToString()).AddDays(2);
                     }
                     else
                     {
                         NgayMuon = DateTime.Parse(dt.Rows[i]["NgayDen"].ToString()).AddDays(-(songaymuon - 1));
-                        NgayTra = NgayMuon.AddDays(songaymuon);
+                        NgayTra = DateTime.Parse(dt.Rows[i]["NgayDi"].ToString()).AddDays(1);
                     }
                 }
                 else
@@ -75,7 +75,7 @@ namespace QuanLyKhachSan
         }
 
         private void dgvHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+         {
             if (e.ColumnIndex == 0 && e.RowIndex != -1) // bấm nút in trên dgv
             {
                 if (DungChung.confirm())
@@ -87,7 +87,7 @@ namespace QuanLyKhachSan
             }
             else if (e.ColumnIndex == 1 && e.RowIndex != -1) // bấm nút xem trên dgv
             {
-                MaDP = dgvHoaDon.Rows[e.RowIndex].Cells[14].Value.ToString();
+                MaDP = dgvHoaDon.Rows[e.RowIndex].Cells[15].Value.ToString();
                 dgvDichVu.DataSource = DungChung.XemQuery(String.Format(@"SELECT DichVu.TenDichVu, DichVu.DonGia, DichVu.MoTa, DatPhong_DichVu.SoLuong, DatPhong_DichVu.TongTien
                                                                                 FROM DichVu INNER JOIN DatPhong_DichVu ON DichVu.ID = DatPhong_DichVu.idDichVu
                                                                                 WHERE (((DatPhong_DichVu.idDatPhong)={0}));

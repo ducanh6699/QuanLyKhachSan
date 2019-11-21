@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DSTaiKhoan));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvNguoiDung = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnSuagrv = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.BtnXoagrv = new System.Windows.Forms.DataGridViewButtonColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.gbNguoiDung = new System.Windows.Forms.GroupBox();
             this.btnLamMoi = new System.Windows.Forms.Button();
@@ -51,15 +60,6 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.labelThemSua = new System.Windows.Forms.Label();
             this.btnMoFormThem = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdQuyen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenNguoiDung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnSuagrv = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.BtnXoagrv = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).BeginInit();
             this.gbNguoiDung.SuspendLayout();
             this.SuspendLayout();
@@ -84,6 +84,86 @@
             this.dgvNguoiDung.Size = new System.Drawing.Size(890, 222);
             this.dgvNguoiDung.TabIndex = 9;
             this.dgvNguoiDung.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNguoiDung_CellClick);
+            // 
+            // id
+            // 
+            this.id.DataPropertyName = "Id";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.id.DefaultCellStyle = dataGridViewCellStyle3;
+            this.id.HeaderText = "Mã Tài Khoản";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 110;
+            // 
+            // IdQuyen
+            // 
+            this.IdQuyen.DataPropertyName = "IdQuyen";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.IdQuyen.DefaultCellStyle = dataGridViewCellStyle4;
+            this.IdQuyen.HeaderText = "Quyền";
+            this.IdQuyen.Name = "IdQuyen";
+            this.IdQuyen.ReadOnly = true;
+            this.IdQuyen.Visible = false;
+            // 
+            // TaiKhoan
+            // 
+            this.TaiKhoan.DataPropertyName = "TaiKhoan";
+            this.TaiKhoan.HeaderText = "Tài Khoản";
+            this.TaiKhoan.Name = "TaiKhoan";
+            this.TaiKhoan.ReadOnly = true;
+            this.TaiKhoan.Width = 145;
+            // 
+            // MatKhau
+            // 
+            this.MatKhau.DataPropertyName = "MatKhau";
+            this.MatKhau.HeaderText = "Mật Khẩu";
+            this.MatKhau.Name = "MatKhau";
+            this.MatKhau.ReadOnly = true;
+            this.MatKhau.Width = 130;
+            // 
+            // TenNguoiDung
+            // 
+            this.TenNguoiDung.DataPropertyName = "TenNguoiDung";
+            this.TenNguoiDung.HeaderText = "Tên Người Dùng";
+            this.TenNguoiDung.Name = "TenNguoiDung";
+            this.TenNguoiDung.ReadOnly = true;
+            this.TenNguoiDung.Width = 160;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa Chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            this.DiaChi.Width = 150;
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 120;
+            // 
+            // BtnSuagrv
+            // 
+            this.BtnSuagrv.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.BtnSuagrv.HeaderText = "Sửa";
+            this.BtnSuagrv.Name = "BtnSuagrv";
+            this.BtnSuagrv.Text = "Sửa";
+            this.BtnSuagrv.UseColumnTextForButtonValue = true;
+            this.BtnSuagrv.Width = 70;
+            // 
+            // BtnXoagrv
+            // 
+            this.BtnXoagrv.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.BtnXoagrv.HeaderText = "Xóa";
+            this.BtnXoagrv.Name = "BtnXoagrv";
+            this.BtnXoagrv.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.BtnXoagrv.Text = "Xóa";
+            this.BtnXoagrv.UseColumnTextForButtonValue = true;
+            this.BtnXoagrv.Width = 70;
             // 
             // label1
             // 
@@ -279,86 +359,6 @@
             this.btnMoFormThem.UseVisualStyleBackColor = true;
             this.btnMoFormThem.Click += new System.EventHandler(this.btnMoFormThem_Click);
             // 
-            // id
-            // 
-            this.id.DataPropertyName = "Id";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.id.DefaultCellStyle = dataGridViewCellStyle1;
-            this.id.HeaderText = "Mã Tài Khoản";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            this.id.Width = 110;
-            // 
-            // IdQuyen
-            // 
-            this.IdQuyen.DataPropertyName = "IdQuyen";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.IdQuyen.DefaultCellStyle = dataGridViewCellStyle2;
-            this.IdQuyen.HeaderText = "Quyền";
-            this.IdQuyen.Name = "IdQuyen";
-            this.IdQuyen.ReadOnly = true;
-            this.IdQuyen.Visible = false;
-            // 
-            // TaiKhoan
-            // 
-            this.TaiKhoan.DataPropertyName = "TaiKhoan";
-            this.TaiKhoan.HeaderText = "Tài Khoản";
-            this.TaiKhoan.Name = "TaiKhoan";
-            this.TaiKhoan.ReadOnly = true;
-            this.TaiKhoan.Width = 145;
-            // 
-            // MatKhau
-            // 
-            this.MatKhau.DataPropertyName = "MatKhau";
-            this.MatKhau.HeaderText = "Mật Khẩu";
-            this.MatKhau.Name = "MatKhau";
-            this.MatKhau.ReadOnly = true;
-            this.MatKhau.Width = 130;
-            // 
-            // TenNguoiDung
-            // 
-            this.TenNguoiDung.DataPropertyName = "TenNguoiDung";
-            this.TenNguoiDung.HeaderText = "Tên Người Dùng";
-            this.TenNguoiDung.Name = "TenNguoiDung";
-            this.TenNguoiDung.ReadOnly = true;
-            this.TenNguoiDung.Width = 160;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
-            this.DiaChi.Width = 150;
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.Name = "Email";
-            this.Email.ReadOnly = true;
-            this.Email.Width = 120;
-            // 
-            // BtnSuagrv
-            // 
-            this.BtnSuagrv.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.BtnSuagrv.HeaderText = "Sửa";
-            this.BtnSuagrv.Name = "BtnSuagrv";
-            this.BtnSuagrv.Text = "Sửa";
-            this.BtnSuagrv.UseColumnTextForButtonValue = true;
-            this.BtnSuagrv.Width = 70;
-            // 
-            // BtnXoagrv
-            // 
-            this.BtnXoagrv.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.BtnXoagrv.HeaderText = "Xóa";
-            this.BtnXoagrv.Name = "BtnXoagrv";
-            this.BtnXoagrv.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.BtnXoagrv.Text = "Xóa";
-            this.BtnXoagrv.UseColumnTextForButtonValue = true;
-            this.BtnXoagrv.Width = 70;
-            // 
             // DSTaiKhoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,9 +369,10 @@
             this.Controls.Add(this.gbNguoiDung);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvNguoiDung);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DSTaiKhoan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Người Dùng";
+            this.Text = "Danh sách người dùng";
             this.Load += new System.EventHandler(this.DSTaiKhoan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNguoiDung)).EndInit();
             this.gbNguoiDung.ResumeLayout(false);
