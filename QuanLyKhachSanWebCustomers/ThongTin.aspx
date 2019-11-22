@@ -91,7 +91,8 @@
                                     <h6 class="my-0">Số ngày</h6>
                                     <small class="text-muted">Số ngày ở khách sạn</small>
                                 </div>
-                                <span class="text-muted"><asp:Label ID="lbSoNgay" runat="server" Text="Không xác định"></asp:Label></span>
+                                <span class="text-muted">
+                                    <asp:Label ID="lbSoNgay" runat="server" Text="Không xác định"></asp:Label></span>
                             </li>
 
                             <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -99,7 +100,8 @@
                                     <h6 class="my-0">Thành tiền</h6>
                                     <small class="text-muted">Toàn bộ chi phí trong hóa đơn</small>
                                 </div>
-                                <span class="text-muted"><asp:Label ID="lbChiPhi" runat="server" Text="Không xác định"></asp:Label></span>
+                                <span class="text-muted">
+                                    <asp:Label ID="lbChiPhi" runat="server" Text="Không xác định"></asp:Label></span>
                             </li>
                         </ul>
                     </div>
@@ -145,32 +147,84 @@
                         </div>
 
 
+
                         <hr class="mb-4">
-
-                        <asp:Button ID="Submit" class="btn btn-primary btn-lg btn-block" runat="server" Text="Hoàn tất đặt phòng" OnClientClick="return confirm('Bạn chắc chắn chứ?');" OnClick="Submit_Click" />
-                        <hr class="mb-4">
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
-
-        <footer class="footer-area section_gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12  col-md-12 col-sm-12">
-                        <div class="single-footer-widget">
-                            <h6 class="footer_title">Về chúng tôi</h6>
-                            <p></p>
+                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
+                            Hoàn tất đặt phòng
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Bạn có chắc chắn muốn đặt phòng ?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-group row">
+                                            <label for="inputPassword" class="col-sm-4 col-form-label">Số phòng</label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword" class="col-sm-4 col-form-label">Ngày nhận</label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword" class="col-sm-4 col-form-label">Ngày trả</label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword" class="col-sm-4 col-form-label">Số người</label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputPassword" class="col-sm-4 col-form-label">Thành tiền</label>
+                                            <div class="col-sm-8">
+                                                <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
+                                        <asp:Button ID="Submit" class="btn btn-success" runat="server" Text="OK" OnClick="Submit_Click" />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
                 </div>
-                <div class="border_line"></div>
+
+
             </div>
-        </footer>
+
+            <footer class="footer-area section_gap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12  col-md-12 col-sm-12">
+                            <div class="single-footer-widget">
+                                <h6 class="footer_title">Về chúng tôi</h6>
+                                <p></p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="border_line"></div>
+                </div>
+            </footer>
     </form>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
 

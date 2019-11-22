@@ -34,7 +34,9 @@ namespace QuanLyKhachSanWebCustomers
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            try {
+
+            try
+            {
                 if (String.IsNullOrEmpty(Request.QueryString["NgayNhan"]) || String.IsNullOrEmpty(Request.QueryString["NgayTra"]) || String.IsNullOrEmpty(Request.QueryString["SDT"]) || String.IsNullOrEmpty(Request.QueryString["id"]))
                 {
                     baoloi();
@@ -65,7 +67,15 @@ namespace QuanLyKhachSanWebCustomers
 
                         Sql = String.Format("Select * From KhachHang where SDT = '{0}'", Request.QueryString["SDT"].ToString());
                         DataTable tb = DungChung.XemQuery(Sql);
-
+                        String sql = String.Format(@"SELECT LoaiPhong.SoGiuong
+                            FROM LoaiPhong INNER JOIN Phong ON LoaiPhong.ID = Phong.IDLoaiPhong
+                            WHERE(((Phong.SoPhong) = {0}));", lbSoPhong.Text);
+                        DataTable tbl = DungChung.XemQuery(sql);
+                        TextBox3.Text = lbSoPhong.Text;
+                        TextBox1.Text = Request.QueryString["NgayNhan"].ToString();
+                        TextBox2.Text = Request.QueryString["NgayTra"].ToString();
+                        TextBox4.Text = tbl.Rows[0]["SoGiuong"].ToString();
+                        TextBox5.Text = lbChiPhi.Text;
 
 
                         if (tb.Rows.Count != 0)
@@ -99,7 +109,7 @@ namespace QuanLyKhachSanWebCustomers
             String sql;
             if (newguess)
             {
-                sql = String.Format("Insert into KhachHang (Ten,NgaySinh,GioiTinh,DiaChi,SDT) values('{0}','{1}','{2}','{3}','{4}')", txtTen.Text, txtNgaySinh.Text,DropDownList1.SelectedItem.Text,txtDiaChi.Text ,txtSDT.Text);
+                sql = String.Format("Insert into KhachHang (Ten,NgaySinh,GioiTinh,DiaChi,SDT) values('{0}','{1}','{2}','{3}','{4}')", txtTen.Text, txtNgaySinh.Text, DropDownList1.SelectedItem.Text, txtDiaChi.Text, txtSDT.Text);
                 DungChung.ThemSuaXoaQuery(sql);
                 sql = String.Format("select ID from KhachHang where SDT = '{0}'", txtSDT.Text);
                 id = lastid(sql);
@@ -109,7 +119,10 @@ namespace QuanLyKhachSanWebCustomers
             String lastidDatPhong = lastid("Select TOP 1 ID FROM DatPhong ORDER BY id DESC");
             sql = String.Format("INSERT into HoaDon (IDDatPhong,TongSoTien) values({0},{1})", lastidDatPhong, lbChiPhi.Text);
             DungChung.ThemSuaXoaQuery(sql);
-            Response.Redirect("index.aspx");
+            thongtin.Visible = false;
+            msgLoi.Visible = true;
+            Label2.Text = "Đặt phòng thành công";
         }
+
     }
 }
