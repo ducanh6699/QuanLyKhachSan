@@ -150,7 +150,7 @@
 
 
                         <hr class="mb-4">
-                        <asp:Button ID="Submit" class="btn btn-primary btn-lg btn-block" OnClientClick="return confirm('Bạn chắc chắn chứ')" runat="server" Text="OK" OnClick="Submit_Click" />
+                        <asp:Button ID="Submit" class="btn btn-primary btn-lg btn-block" OnClientClick="return confirm('Bạn chắc chắn chứ')" runat="server" Text="Hoàn tất đặt phòng" OnClick="Submit_Click" />
                     </div>
 
                 </div>
@@ -159,7 +159,7 @@
             </div>
 
             <div id="thongbao" runat="server" visible="false" class="container">
-                <h3 class="text-heading title_color row">Đặt phòng thành công! <small><a href="index.aspx"> về trang chủ</a></small></h3>
+                <h3 class="text-heading title_color row">Đặt phòng thành công! <small><a href="index.aspx">về trang chủ</a></small></h3>
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-4 col-form-label">Tên khách hàng</label>
                     <div class="col-sm-8">
@@ -180,7 +180,6 @@
                         <asp:Label ID="labelngaynhan" runat="server" Font-Names="Times New Roman"></asp:Label>
                     </div>
                 </div>
-
                 <div class="form-group row">
                     <label for="inputPassword" class="col-sm-4 col-form-label">Ngày trả</label>
                     <div class="col-sm-8">
@@ -201,9 +200,7 @@
                         <asp:Label ID="labelthanhtien" runat="server" Font-Names="Times New Roman"></asp:Label>
                     </div>
                 </div>
-
             </div>
-
             <footer class="footer-area section_gap">
                 <div class="container">
                     <div class="row">
