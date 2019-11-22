@@ -30,6 +30,7 @@ namespace QuanLyKhachSanWebCustomers
         {
             msgLoi.Visible = true;
             thongtin.Visible = false;
+            thongbao.Visible = false;
             Label2.Text = "Không có thông tin hoặc thông tin lỗi! Vui lòng quay lại trang đặt phòng!";
         }
         protected void Page_Load(object sender, EventArgs e)
@@ -67,15 +68,6 @@ namespace QuanLyKhachSanWebCustomers
 
                         Sql = String.Format("Select * From KhachHang where SDT = '{0}'", Request.QueryString["SDT"].ToString());
                         DataTable tb = DungChung.XemQuery(Sql);
-                        String sql = String.Format(@"SELECT LoaiPhong.SoGiuong
-                            FROM LoaiPhong INNER JOIN Phong ON LoaiPhong.ID = Phong.IDLoaiPhong
-                            WHERE(((Phong.SoPhong) = {0}));", lbSoPhong.Text);
-                        DataTable tbl = DungChung.XemQuery(sql);
-                        TextBox3.Text = lbSoPhong.Text;
-                        TextBox1.Text = Request.QueryString["NgayNhan"].ToString();
-                        TextBox2.Text = Request.QueryString["NgayTra"].ToString();
-                        TextBox4.Text = tbl.Rows[0]["SoGiuong"].ToString();
-                        TextBox5.Text = lbChiPhi.Text;
 
 
                         if (tb.Rows.Count != 0)
@@ -119,9 +111,19 @@ namespace QuanLyKhachSanWebCustomers
             String lastidDatPhong = lastid("Select TOP 1 ID FROM DatPhong ORDER BY id DESC");
             sql = String.Format("INSERT into HoaDon (IDDatPhong,TongSoTien) values({0},{1})", lastidDatPhong, lbChiPhi.Text);
             DungChung.ThemSuaXoaQuery(sql);
+            Response.Write("<script>alert('Đặt phòng thành công')</script>");
+            thongbao.Visible = true;
             thongtin.Visible = false;
-            msgLoi.Visible = true;
-            Label2.Text = "Đặt phòng thành công";
+            sql = String.Format(@"SELECT LoaiPhong.SoGiuong
+                            FROM LoaiPhong INNER JOIN Phong ON LoaiPhong.ID = Phong.IDLoaiPhong
+                            WHERE(((Phong.SoPhong) = {0}));", lbSoPhong.Text);
+            DataTable tbl = DungChung.XemQuery(sql);
+            Labeltenkhachhang.Text = txtTen.Text;
+            labelSDT.Text = txtSDT.Text;
+            labelngaynhan.Text = Request.QueryString["NgayNhan"].ToString();
+            labelngaytra.Text = Request.QueryString["NgayTra"].ToString();
+            labelsonguoi.Text = tbl.Rows[0]["SoGiuong"].ToString();
+            labelthanhtien.Text = lbChiPhi.Text;
         }
 
     }

@@ -62,13 +62,14 @@
 
         <div class="whole-wrap">
 
-            <h3 class="text-heading title_color container">Điền thông tin khách hàng</h3>
 
             <div id="msgLoi" visible="false" class="container" runat="server" style="padding-bottom: 300px;">
+                <h3 class="text-heading title_color container row">Điền thông tin khách hàng</h3>
                 <asp:Label ID="Label2" runat="server" Text="" ForeColor="Red" Font-Names="Times New Roman"></asp:Label>
             </div>
 
             <div id="thongtin" class="container" runat="server">
+                <h3 class="text-heading title_color row">Điền thông tin khách hàng</h3>
                 <div class="row">
                     <div class="col-md-4 order-md-2 mb-4">
                         <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -149,61 +150,57 @@
 
 
                         <hr class="mb-4">
-                        <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#exampleModal">
-                            Hoàn tất đặt phòng
-                        </button>
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Bạn có chắc chắn muốn đặt phòng ?</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-4 col-form-label">Số phòng</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-4 col-form-label">Ngày nhận</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="TextBox1" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-4 col-form-label">Ngày trả</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="TextBox2" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-4 col-form-label">Số người</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="TextBox4" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label for="inputPassword" class="col-sm-4 col-form-label">Thành tiền</label>
-                                            <div class="col-sm-8">
-                                                <asp:TextBox ID="TextBox5" CssClass="form-control" runat="server" ReadOnly="true"></asp:TextBox>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Không</button>
-                                        <asp:Button ID="Submit" class="btn btn-success" runat="server" Text="OK" OnClick="Submit_Click" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <asp:Button ID="Submit" class="btn btn-primary btn-lg btn-block" OnClientClick="return confirm('Bạn chắc chắn chứ')" runat="server" Text="OK" OnClick="Submit_Click" />
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div id="thongbao" runat="server" visible="false" class="container">
+                <h3 class="text-heading title_color row">Đặt phòng thành công! <small><a href="index.aspx"> về trang chủ</a></small></h3>
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Tên khách hàng</label>
+                    <div class="col-sm-8">
+                        <asp:Label ID="Labeltenkhachhang" runat="server" Font-Names="Times New Roman"></asp:Label>
                     </div>
                 </div>
 
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Số điện thoại</label>
+                    <div class="col-sm-8">
+                        <asp:Label ID="labelSDT" runat="server" Font-Names="Times New Roman"></asp:Label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Ngày nhận</label>
+                    <div class="col-sm-8">
+                        <asp:Label ID="labelngaynhan" runat="server" Font-Names="Times New Roman"></asp:Label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Ngày trả</label>
+                    <div class="col-sm-8">
+                        <asp:Label ID="labelngaytra" runat="server" Font-Names="Times New Roman"></asp:Label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Số người</label>
+                    <div class="col-sm-8">
+                        <asp:Label ID="labelsonguoi" runat="server" Font-Names="Times New Roman"></asp:Label>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="inputPassword" class="col-sm-4 col-form-label">Thành tiền</label>
+                    <div class="col-sm-8">
+                        <asp:Label ID="labelthanhtien" runat="server" Font-Names="Times New Roman"></asp:Label>
+                    </div>
+                </div>
 
             </div>
 
